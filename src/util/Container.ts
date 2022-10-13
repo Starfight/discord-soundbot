@@ -44,6 +44,9 @@ import {
   SkipCommand,
   SoundCommand
 } from '../commands/sound';
+import {
+  GaucheDroiteCommand 
+} from '../commands/custom';
 
 export const config = new Config();
 const queue = new SoundQueue(config);
@@ -92,7 +95,10 @@ const commands = [
   new ConfigCommand(config),
   new LanguageCommand(config),
   new IgnoreCommand(),
-  new UnignoreCommand()
+  new UnignoreCommand(),
+
+  // CUSTOM
+  new GaucheDroiteCommand()
 ];
 
 const commandCollection = new CommandCollection(commands);
